@@ -1,0 +1,19 @@
+<div *ngIf="dados && dados.length > 0">
+  <div *ngFor="let prod of dados">
+    <h2>{{ prod.Company }}</h2>
+
+    <h4>Cursos:</h4>
+
+    <div *ngIf="prod.Courses && prod.Courses.length > 0">
+      <li *ngFor="let item of prod.Courses">
+        {{ item.Name }}
+      </li>
+    </div>
+
+    <div style="display: flex;">
+      <h4>ID:</h4>
+      <span style="margin-top: auto;margin-bottom: auto;margin-left: 10px;">{{ prod.Id }}</span>
+    </div>
+
+  </div>
+</div>
